@@ -1,0 +1,54 @@
+.welcome{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textAnim {
+    animation: zoomOut 1s forwards 8.5s;
+}
+
+.textAnim path{
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4;
+ 
+}
+
+@keyframes textanim {
+   to {
+       stroke-dashoffset: 0;
+   }
+    
+}
+
+@keyframes zoomOut{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(5);
+        opacity: 0;
+    }
+
+}
+
+.container{
+    transform: translateY(80%);
+    opacity: 0;
+    animation: slideIn 1s forwards 9s;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(80%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
